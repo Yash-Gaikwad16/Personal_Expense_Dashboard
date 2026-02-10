@@ -47,9 +47,7 @@ from ingestion → cleaning → categorization → storage → analytics → nat
 
 ### 1️⃣ Extraction
 - Gmail API used to fetch HDFC bank alert emails
-- Handles multiple sender patterns:
-  - `alerts@hdfcbank.net.in`
-  - `alerts@hdfcbank.bank.in`
+- Handles multiple sender patterns
 - PDF upload supported (encrypted & non-encrypted)
 
 ### 2️⃣ Transformation
@@ -99,11 +97,6 @@ from ingestion → cleaning → categorization → storage → analytics → nat
 | Aggregation | "Largest expense category" | SQL |
 | Semantic | "Explain my spending habits" | RAG |
 | Hybrid | "Why was January expensive?" | SQL + RAG |
-
-### Why Hybrid?
-- Embeddings are **bad at numbers & dates**
-- SQL is **perfect for aggregations**
-- RAG is **great for explanations**
 
 ---
 
@@ -159,7 +152,6 @@ This project demonstrates:
 - End-to-end system thinking
 - Production-level automation
 
-It is **not a toy project** — it mirrors how modern fintech data systems are built.
 
 ---
 
