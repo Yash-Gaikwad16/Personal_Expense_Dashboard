@@ -39,23 +39,7 @@ from ingestion → cleaning → categorization → storage → analytics → nat
 ---
 
 ## 🏗️ System Architecture
-```mermaid
-flowchart TD
-    A[Gmail API] --> B[Email Parser]
-    C[PDF Upload] --> B
-    B --> D[Preprocessing]
-    D --> E[Deduplication Hash]
-    E --> F[Rule Engine]
-    F -->|New Pattern| G[LLM]
-    G --> F
-    F --> H[PostgreSQL]
-    H --> I[Streamlit Dashboard]
-    H --> J[Query Router]
-    J -->|Analytical| K[SQL Engine]
-    J -->|Semantic| L[RAG]
-    L --> M[ChromaDB]
-    M --> N[LLM Response]
-```
+![Architecture Diagram](assets/Personal_Expense.png)
 
 ---
 
